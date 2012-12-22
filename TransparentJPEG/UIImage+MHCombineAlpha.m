@@ -1,7 +1,5 @@
-/*!
- * \file UIImage+MHCombineAlpha.m
- *
- * Copyright (c) 2011 Matthijs Hollemans
+/*
+ * Copyright (c) 2011-2012 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,8 +27,8 @@
 
 - (UIImage *)mh_combineWithAlphaImage:(UIImage *)alphaImage backgroundColor:(UIColor *)backgroundColor
 {
-	NSAssert(alphaImage != nil, @"alphaImage may not be nil");
-	NSAssert(backgroundColor != nil, @"backgroundColor may not be nil");
+	NSParameterAssert(alphaImage != nil);
+	NSParameterAssert(backgroundColor != nil);
 	NSAssert(CGSizeEqualToSize(self.size, alphaImage.size), @"Source and alpha images must have equal dimensions");
 
 	// Get the RGB components for the background color.

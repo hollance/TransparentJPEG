@@ -1,7 +1,5 @@
-/*!
- * \file UIImage+MHRawBytes.h
- *
- * Copyright (c) 2011 Matthijs Hollemans
+/*
+ * Copyright (c) 2011-2012 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,31 +20,29 @@
  * THE SOFTWARE.
  */
 
-/*!
- * Allows raw byte access to UIImage data.
+/*
+ * Category on the UIImage class that allows you to have transparent JPEGs.
  */
-@interface UIImage (MHRawBytes)
+@interface UIImage (MHCombineAlpha)
 
-/*!
- * Creates a new image from a byte array.
+/*
+ * Combines a source image, which is assumed not to have any alpha information,
+ * with a second image that serves as its alpha channel.
  *
- * @param data The byte array. This must contain width*height*4 bytes in ARGB
- *        order. You still need to \c free() the data afterwards yourself.
- * @param size The dimensions of the image in pixels.
- * @return The new UIImage or nil if creating the image failed.
+ * You can use this method to add alpha information to an image loaded from a
+ * JPEG file, in order to give it transparency.
+ *
+ * @param alphaImage This must be a grayscale image of the same dimensions as
+ *        the source image. Black represents full transparency, white is full
+ *        opacity.
+ *
+ * @param backgroundColor Because the source image does not have transparency,
+ *        it is rendered on top of a solid color, usually pure white or black.
+ *        You must specify this background color, so that the original colors
+ *        can be restored.
+ *
+ * @return a new UIImage object
  */
-+ (UIImage *)mh_imageWithBytes:(unsigned char *)data size:(CGSize)size;
-
-/*!
- * Returns the raw bytes that make up the image.
- *
- * Offset for the pixel at (x,y) in the byte array is: y*width*4 + x*4.
- * Alpha = offset[0], red = offset[1], green = offset[2], blue = offset[3].
- *
- * @return A byte array or NULL if the operation failed. The array contains
- *         width*height*4 bytes in ARGB order. You are responsible for freeing
- *         this memory with \c free() when you are done with it.
- */
-- (unsigned char *)mh_createBytesFromImage;
+- (UIImage *)mh_combineWithAlphaImage:(UIImage *)alphaImage backgroundColor:(UIColor *)backgroundColor;
 
 @end

@@ -1,7 +1,5 @@
-/*!
- * \file UIImage+MHRawBytes.h
- *
- * Copyright (c) 2011 Matthijs Hollemans
+/*
+ * Copyright (c) 2011-2012 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -99,10 +97,9 @@
 
 	CGRect rect = CGRectMake(0.0f, 0.0f, width, height);
 	CGContextDrawImage(context, rect, self.CGImage);
-	unsigned char *imageData = CGBitmapContextGetData(context);
 	CGContextRelease(context);
 
-	return imageData;
+	return contextData;
 }
 
 @end

@@ -8,33 +8,38 @@
 
 @implementation ViewController
 {
-	UIImage *sourceImage;
-	UIImage *alphaImage;
-	UIImage *convertedImage;
-	UIImage *originalImage;
+	UIImage *_sourceImage;
+	UIImage *_alphaImage;
+	UIImage *_convertedImage;
+	UIImage *_originalImage;
 }
-
-@synthesize imageView;
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 
-	//NSString *sourceImageName = @"Test-Source-Q40-White.jpg";
-	//NSString *alphaImageName = @"Test-Alpha-Q40.jpg";
-	//NSString *originalImageName = @"Test.png";
+	// Note: The project includes the test images at various quality levels.
+	// The lower the quality, the higher the level of compression, but at some
+	// point you start to see too many artifacts. Keep in mind that the source
+	// and alpha images may be compressed at different levels.
 
+#if 1
 	NSString *sourceImageName = @"Bird-Source-Q40.jpg";
 	NSString *alphaImageName = @"Bird-Alpha-Q40.jpg";
 	NSString *originalImageName = @"Bird.png";
+#else
+	NSString *sourceImageName = @"Test-Source-Q40-White.jpg";
+	NSString *alphaImageName = @"Test-Alpha-Q40.jpg";
+	NSString *originalImageName = @"Test.png";
+#endif
 
 	UIColor *color = [UIColor whiteColor];
-	sourceImage = [UIImage imageNamed:sourceImageName];
-	alphaImage = [UIImage imageNamed:alphaImageName];
-	convertedImage = [sourceImage mh_combineWithAlphaImage:alphaImage backgroundColor:color];
-	originalImage = [UIImage imageNamed:originalImageName];
+	_sourceImage = [UIImage imageNamed:sourceImageName];
+	_alphaImage = [UIImage imageNamed:alphaImageName];
+	_convertedImage = [_sourceImage mh_combineWithAlphaImage:_alphaImage backgroundColor:color];
+	_originalImage = [UIImage imageNamed:originalImageName];
 
-	self.imageView.image = convertedImage;
+	self.imageView.image = _convertedImage;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -45,13 +50,13 @@
 - (IBAction)imageSegmentChanged:(UISegmentedControl *)sender
 {
 	if (sender.selectedSegmentIndex == 0)
-		self.imageView.image = convertedImage;
+		self.imageView.image = _convertedImage;
 	else if (sender.selectedSegmentIndex == 1)
-		self.imageView.image = sourceImage;
+		self.imageView.image = _sourceImage;
 	else if (sender.selectedSegmentIndex == 2)
-		self.imageView.image = alphaImage;
+		self.imageView.image = _alphaImage;
 	else if (sender.selectedSegmentIndex == 3)
-		self.imageView.image = originalImage;
+		self.imageView.image = _originalImage;
 }
 
 - (IBAction)backgroundSegmentChanged:(UISegmentedControl *)sender

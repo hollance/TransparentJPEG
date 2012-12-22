@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B254DEF1685EDE600B21EF9 /* UIImage+MHCombineAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B254DEC1685EDE600B21EF9 /* UIImage+MHCombineAlpha.m */; };
+		7B254DF01685EDE600B21EF9 /* UIImage+MHRawBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B254DEE1685EDE600B21EF9 /* UIImage+MHRawBytes.m */; };
 		7B8FAA48146D653C0039BFDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8FAA47146D653C0039BFDA /* UIKit.framework */; };
 		7B8FAA4A146D653C0039BFDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8FAA49146D653C0039BFDA /* Foundation.framework */; };
 		7B8FAA4C146D653C0039BFDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8FAA4B146D653C0039BFDA /* CoreGraphics.framework */; };
-		7B8FAA52146D653C0039BFDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FAA50146D653C0039BFDA /* InfoPlist.strings */; };
 		7B8FAA54146D653C0039BFDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FAA53146D653C0039BFDA /* main.m */; };
 		7B8FAA58146D653C0039BFDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FAA57146D653C0039BFDA /* AppDelegate.m */; };
 		7B8FAA5B146D653C0039BFDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FAA5A146D653C0039BFDA /* ViewController.m */; };
 		7B8FAA5E146D653C0039BFDA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FAA5C146D653C0039BFDA /* ViewController.xib */; };
-		7B8FAA6E146D69560039BFDA /* UIImage+MHRawBytes.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FAA6D146D69550039BFDA /* UIImage+MHRawBytes.m */; };
-		7B8FAA71146D69C50039BFDA /* UIImage+MHCombineAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8FAA70146D69C50039BFDA /* UIImage+MHCombineAlpha.m */; };
 		7B8FAAAA146DB8990039BFDA /* Bird-Alpha-Q40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FAA9C146DB8990039BFDA /* Bird-Alpha-Q40.jpg */; };
 		7B8FAAAB146DB8990039BFDA /* Bird-Alpha-Q100.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FAA9D146DB8990039BFDA /* Bird-Alpha-Q100.jpg */; };
 		7B8FAAAC146DB8990039BFDA /* Bird-Source-Q20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FAA9E146DB8990039BFDA /* Bird-Source-Q20.jpg */; };
@@ -34,12 +33,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B254DEB1685EDE600B21EF9 /* UIImage+MHCombineAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MHCombineAlpha.h"; sourceTree = "<group>"; };
+		7B254DEC1685EDE600B21EF9 /* UIImage+MHCombineAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MHCombineAlpha.m"; sourceTree = "<group>"; };
+		7B254DED1685EDE600B21EF9 /* UIImage+MHRawBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MHRawBytes.h"; sourceTree = "<group>"; };
+		7B254DEE1685EDE600B21EF9 /* UIImage+MHRawBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MHRawBytes.m"; sourceTree = "<group>"; };
 		7B8FAA43146D653C0039BFDA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8FAA47146D653C0039BFDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7B8FAA49146D653C0039BFDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B8FAA4B146D653C0039BFDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7B8FAA4F146D653C0039BFDA /* Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
-		7B8FAA51146D653C0039BFDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B8FAA53146D653C0039BFDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B8FAA55146D653C0039BFDA /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
 		7B8FAA56146D653C0039BFDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,10 +49,6 @@
 		7B8FAA59146D653C0039BFDA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7B8FAA5A146D653C0039BFDA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7B8FAA5D146D653C0039BFDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		7B8FAA6C146D69550039BFDA /* UIImage+MHRawBytes.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "UIImage+MHRawBytes.h"; sourceTree = "<group>"; };
-		7B8FAA6D146D69550039BFDA /* UIImage+MHRawBytes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MHRawBytes.m"; sourceTree = "<group>"; };
-		7B8FAA6F146D69C50039BFDA /* UIImage+MHCombineAlpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MHCombineAlpha.h"; sourceTree = "<group>"; };
-		7B8FAA70146D69C50039BFDA /* UIImage+MHCombineAlpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MHCombineAlpha.m"; sourceTree = "<group>"; };
 		7B8FAA9C146DB8990039BFDA /* Bird-Alpha-Q40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bird-Alpha-Q40.jpg"; sourceTree = "<group>"; };
 		7B8FAA9D146DB8990039BFDA /* Bird-Alpha-Q100.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bird-Alpha-Q100.jpg"; sourceTree = "<group>"; };
 		7B8FAA9E146DB8990039BFDA /* Bird-Source-Q20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bird-Source-Q20.jpg"; sourceTree = "<group>"; };
@@ -81,9 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B254DEA1685EDE600B21EF9 /* TransparentJPEG */ = {
+			isa = PBXGroup;
+			children = (
+				7B254DEB1685EDE600B21EF9 /* UIImage+MHCombineAlpha.h */,
+				7B254DEC1685EDE600B21EF9 /* UIImage+MHCombineAlpha.m */,
+				7B254DED1685EDE600B21EF9 /* UIImage+MHRawBytes.h */,
+				7B254DEE1685EDE600B21EF9 /* UIImage+MHRawBytes.m */,
+			);
+			path = TransparentJPEG;
+			sourceTree = "<group>";
+		};
 		7B8FAA38146D653C0039BFDA = {
 			isa = PBXGroup;
 			children = (
+				7B254DEA1685EDE600B21EF9 /* TransparentJPEG */,
 				7B8FAA4D146D653C0039BFDA /* Demo */,
 				7B8FAA68146D66A60039BFDA /* Images */,
 				7B8FAA46146D653C0039BFDA /* Frameworks */,
@@ -117,10 +127,6 @@
 				7B8FAA59146D653C0039BFDA /* ViewController.h */,
 				7B8FAA5A146D653C0039BFDA /* ViewController.m */,
 				7B8FAA5C146D653C0039BFDA /* ViewController.xib */,
-				7B8FAA6F146D69C50039BFDA /* UIImage+MHCombineAlpha.h */,
-				7B8FAA70146D69C50039BFDA /* UIImage+MHCombineAlpha.m */,
-				7B8FAA6C146D69550039BFDA /* UIImage+MHRawBytes.h */,
-				7B8FAA6D146D69550039BFDA /* UIImage+MHRawBytes.m */,
 				7B8FAA4E146D653C0039BFDA /* Supporting Files */,
 			);
 			path = Demo;
@@ -130,9 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				7B8FAA4F146D653C0039BFDA /* Demo-Info.plist */,
-				7B8FAA50146D653C0039BFDA /* InfoPlist.strings */,
-				7B8FAA53146D653C0039BFDA /* main.m */,
 				7B8FAA55146D653C0039BFDA /* Demo-Prefix.pch */,
+				7B8FAA53146D653C0039BFDA /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,7 +189,7 @@
 		7B8FAA3A146D653C0039BFDA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Hollance;
 			};
 			buildConfigurationList = 7B8FAA3D146D653C0039BFDA /* Build configuration list for PBXProject "Demo" */;
@@ -209,7 +214,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8FAA52146D653C0039BFDA /* InfoPlist.strings in Resources */,
 				7B8FAA5E146D653C0039BFDA /* ViewController.xib in Resources */,
 				7B8FAAAA146DB8990039BFDA /* Bird-Alpha-Q40.jpg in Resources */,
 				7B8FAAAB146DB8990039BFDA /* Bird-Alpha-Q100.jpg in Resources */,
@@ -238,22 +242,14 @@
 				7B8FAA54146D653C0039BFDA /* main.m in Sources */,
 				7B8FAA58146D653C0039BFDA /* AppDelegate.m in Sources */,
 				7B8FAA5B146D653C0039BFDA /* ViewController.m in Sources */,
-				7B8FAA6E146D69560039BFDA /* UIImage+MHRawBytes.m in Sources */,
-				7B8FAA71146D69C50039BFDA /* UIImage+MHCombineAlpha.m in Sources */,
+				7B254DEF1685EDE600B21EF9 /* UIImage+MHCombineAlpha.m in Sources */,
+				7B254DF01685EDE600B21EF9 /* UIImage+MHRawBytes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B8FAA50146D653C0039BFDA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B8FAA51146D653C0039BFDA /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		7B8FAA5C146D653C0039BFDA /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -320,7 +316,11 @@
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				WARNING_CFLAGS = "-Wall";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -333,7 +333,11 @@
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				WARNING_CFLAGS = "-Wall";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
