@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2012 Matthijs Hollemans
+ * Copyright (c) 2011-2014 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,19 +30,20 @@
 	NSParameterAssert(alphaImage != nil);
 	NSParameterAssert(backgroundColor != nil);
 	NSAssert(CGSizeEqualToSize(self.size, alphaImage.size), @"Source and alpha images must have equal dimensions");
+	NSAssert(self.scale == alphaImage.scale, @"Source and alpha images must have equal scale");
 
 	// Get the RGB components for the background color.
-	int backR, backG, backB;
-	const float *components = CGColorGetComponents(backgroundColor.CGColor);
+	NSInteger backR, backG, backB;
+	const CGFloat *components = CGColorGetComponents(backgroundColor.CGColor);
 	if (CGColorGetNumberOfComponents(backgroundColor.CGColor) == 4)
 	{
-		backR = components[0] * 255.0f;
-		backG = components[1] * 255.0f;
-		backB = components[2] * 255.0f;
+		backR = components[0] * 255.0;
+		backG = components[1] * 255.0;
+		backB = components[2] * 255.0;
 	}
 	else  // this is for [UIColor whiteColor] etc
 	{
-		backR = backG = backB = components[0] * 255.0f;
+		backR = backG = backB = components[0] * 255.0;
 	}
 
 	uint8_t *data = [self mh_createBytesFromImage];
@@ -52,11 +53,13 @@
 	if (alphaData == NULL) return nil;
 
 	enum { A, R, G, B };
-	int pixelCount = self.size.width * self.size.height;
-	int offset = 0;
-	int a, r, g, b;
+	NSUInteger widthInPixels = self.size.width * self.scale;
+	NSUInteger heightInPixels = self.size.height * self.scale;
+	NSUInteger pixelCount = widthInPixels * heightInPixels;
+	NSUInteger offset = 0;
+	NSInteger a, r, g, b;
 
-	for (int i = 0; i < pixelCount; ++i)
+	for (NSUInteger i = 0; i < pixelCount; ++i)
 	{
 		// Get the alpha data from the mask image. This is a grayscale image
 		// so it doesn't matter whether we pick R, G or B.
@@ -101,7 +104,7 @@
 		offset += 4;
 	}
 
-	UIImage *combinedImage = [UIImage mh_imageWithBytes:data size:self.size];
+	UIImage *combinedImage = [UIImage mh_imageWithBytes:data size:self.size scale:self.scale];
 	free(data);
 	free(alphaData);
 	return combinedImage;

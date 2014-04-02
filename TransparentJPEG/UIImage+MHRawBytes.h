@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2012 Matthijs Hollemans
+ * Copyright (c) 2011-2014 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,22 +20,23 @@
  * THE SOFTWARE.
  */
 
-/*
+/*!
  * Allows raw byte access to UIImage data.
  */
 @interface UIImage (MHRawBytes)
 
-/*
+/*!
  * Creates a new image from a byte array.
  *
  * @param data The byte array. This must contain width*height*4 bytes in ARGB
  *        order. You still need to free() the data afterwards yourself.
  * @param size The dimensions of the image in pixels.
+ * @param scale Set this to 2.0 for a Retina image.
  * @return The new UIImage or nil if creating the image failed.
  */
-+ (UIImage *)mh_imageWithBytes:(unsigned char *)data size:(CGSize)size;
++ (UIImage *)mh_imageWithBytes:(unsigned char *)data size:(CGSize)size scale:(CGFloat)scale;
 
-/*
+/*!
  * Returns the raw bytes that make up the image.
  *
  * Offset for the pixel at (x,y) in the byte array is: y*width*4 + x*4.

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2012 Matthijs Hollemans
+ * Copyright (c) 2011-2014 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@
 
 @implementation UIImage (MHRawBytes)
 
-+ (UIImage *)mh_imageWithBytes:(unsigned char *)data size:(CGSize)size
++ (UIImage *)mh_imageWithBytes:(unsigned char *)data size:(CGSize)size scale:(CGFloat)scale
 {
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	if (colorSpace == NULL)
@@ -34,8 +34,8 @@
 	}
 
 	CGContextRef context = CGBitmapContextCreate(
-		data, size.width, size.height, 8, size.width * 4, colorSpace,
-		kCGImageAlphaPremultipliedFirst);
+		data, size.width * scale, size.height * scale, 8, size.width * scale * 4, colorSpace,
+		(CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
 
 	CGColorSpaceRelease(colorSpace);
 
@@ -56,16 +56,16 @@
 
 	CGContextRelease(context);
 
-	UIImage *image = [UIImage imageWithCGImage:ref];
+	UIImage *image = [UIImage imageWithCGImage:ref scale:scale orientation:UIImageOrientationUp];
 	CFRelease(ref);
 
-	return image;	
+	return image;
 }
 
 - (unsigned char *)mh_createBytesFromImage
 {
-	size_t width = self.size.width;
-	size_t height = self.size.height;
+	size_t width = self.size.width * self.scale;
+	size_t height = self.size.height * self.scale;
 
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	if (colorSpace == NULL)
@@ -84,7 +84,7 @@
 
 	CGContextRef context = CGBitmapContextCreate(
 		contextData, width, height, 8, width * 4, colorSpace,
-		kCGImageAlphaPremultipliedFirst);
+		(CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
 
 	CGColorSpaceRelease(colorSpace);
 
@@ -95,7 +95,7 @@
 		return NULL;
 	}
 
-	CGRect rect = CGRectMake(0.0f, 0.0f, width, height);
+	CGRect rect = CGRectMake(0.0, 0.0, width, height);
 	CGContextDrawImage(context, rect, self.CGImage);
 	CGContextRelease(context);
 

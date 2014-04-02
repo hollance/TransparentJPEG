@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2012 Matthijs Hollemans
+ * Copyright (c) 2011-2014 Matthijs Hollemans
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,12 +20,12 @@
  * THE SOFTWARE.
  */
 
-/*
+/*!
  * Category on the UIImage class that allows you to have transparent JPEGs.
  */
 @interface UIImage (MHCombineAlpha)
 
-/*
+/*!
  * Combines a source image, which is assumed not to have any alpha information,
  * with a second image that serves as its alpha channel.
  *

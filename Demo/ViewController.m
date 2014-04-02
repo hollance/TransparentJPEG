@@ -62,7 +62,7 @@
 - (IBAction)backgroundSegmentChanged:(UISegmentedControl *)sender
 {
 	if (sender.selectedSegmentIndex == 0)
-		self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+		self.view.backgroundColor = [UIColor grayColor];
 	else if (sender.selectedSegmentIndex == 1)
 		self.view.backgroundColor = [UIColor whiteColor];
 	else if (sender.selectedSegmentIndex == 2)

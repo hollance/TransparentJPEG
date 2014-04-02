@@ -30,6 +30,9 @@
 		7B8FAAB5146DB8990039BFDA /* Test-Source-Q100-Purple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FAAA7146DB8990039BFDA /* Test-Source-Q100-Purple.jpg */; };
 		7B8FAAB6146DB8990039BFDA /* Test-Source-Q100-White.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FAAA8146DB8990039BFDA /* Test-Source-Q100-White.jpg */; };
 		7B8FAAB7146DB8990039BFDA /* Test.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B8FAAA9146DB8990039BFDA /* Test.png */; };
+		7B94260D18EC450300346E03 /* Test-Source-Q40-White@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B94260B18EC450300346E03 /* Test-Source-Q40-White@2x.jpg */; };
+		7B94260E18EC450300346E03 /* Test@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B94260C18EC450300346E03 /* Test@2x.png */; };
+		7B94261018EC456200346E03 /* Test-Alpha-Q40@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B94260F18EC456200346E03 /* Test-Alpha-Q40@2x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		7B8FAAA7146DB8990039BFDA /* Test-Source-Q100-Purple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Test-Source-Q100-Purple.jpg"; sourceTree = "<group>"; };
 		7B8FAAA8146DB8990039BFDA /* Test-Source-Q100-White.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Test-Source-Q100-White.jpg"; sourceTree = "<group>"; };
 		7B8FAAA9146DB8990039BFDA /* Test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test.png; sourceTree = "<group>"; };
+		7B94260B18EC450300346E03 /* Test-Source-Q40-White@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Test-Source-Q40-White@2x.jpg"; sourceTree = "<group>"; };
+		7B94260C18EC450300346E03 /* Test@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Test@2x.png"; sourceTree = "<group>"; };
+		7B94260F18EC456200346E03 /* Test-Alpha-Q40@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Test-Alpha-Q40@2x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,20 +151,23 @@
 		7B8FAA68146D66A60039BFDA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				7B8FAA9C146DB8990039BFDA /* Bird-Alpha-Q40.jpg */,
 				7B8FAA9D146DB8990039BFDA /* Bird-Alpha-Q100.jpg */,
+				7B8FAA9C146DB8990039BFDA /* Bird-Alpha-Q40.jpg */,
+				7B8FAAA0146DB8990039BFDA /* Bird-Source-Q100.jpg */,
 				7B8FAA9E146DB8990039BFDA /* Bird-Source-Q20.jpg */,
 				7B8FAA9F146DB8990039BFDA /* Bird-Source-Q40.jpg */,
-				7B8FAAA0146DB8990039BFDA /* Bird-Source-Q100.jpg */,
 				7B8FAAA1146DB8990039BFDA /* Bird.png */,
-				7B8FAAA2146DB8990039BFDA /* Test-Alpha-Q40.jpg */,
 				7B8FAAA3146DB8990039BFDA /* Test-Alpha-Q100.jpg */,
-				7B8FAAA4146DB8990039BFDA /* Test-Source-Q40-Black.jpg */,
-				7B8FAAA5146DB8990039BFDA /* Test-Source-Q40-White.jpg */,
+				7B8FAAA2146DB8990039BFDA /* Test-Alpha-Q40.jpg */,
+				7B94260F18EC456200346E03 /* Test-Alpha-Q40@2x.jpg */,
 				7B8FAAA6146DB8990039BFDA /* Test-Source-Q100-Black.jpg */,
 				7B8FAAA7146DB8990039BFDA /* Test-Source-Q100-Purple.jpg */,
 				7B8FAAA8146DB8990039BFDA /* Test-Source-Q100-White.jpg */,
+				7B8FAAA4146DB8990039BFDA /* Test-Source-Q40-Black.jpg */,
+				7B8FAAA5146DB8990039BFDA /* Test-Source-Q40-White.jpg */,
+				7B94260B18EC450300346E03 /* Test-Source-Q40-White@2x.jpg */,
 				7B8FAAA9146DB8990039BFDA /* Test.png */,
+				7B94260C18EC450300346E03 /* Test@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -189,7 +198,7 @@
 		7B8FAA3A146D653C0039BFDA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Hollance;
 			};
 			buildConfigurationList = 7B8FAA3D146D653C0039BFDA /* Build configuration list for PBXProject "Demo" */;
@@ -215,11 +224,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8FAA5E146D653C0039BFDA /* ViewController.xib in Resources */,
+				7B94261018EC456200346E03 /* Test-Alpha-Q40@2x.jpg in Resources */,
 				7B8FAAAA146DB8990039BFDA /* Bird-Alpha-Q40.jpg in Resources */,
 				7B8FAAAB146DB8990039BFDA /* Bird-Alpha-Q100.jpg in Resources */,
+				7B94260D18EC450300346E03 /* Test-Source-Q40-White@2x.jpg in Resources */,
 				7B8FAAAC146DB8990039BFDA /* Bird-Source-Q20.jpg in Resources */,
 				7B8FAAAD146DB8990039BFDA /* Bird-Source-Q40.jpg in Resources */,
 				7B8FAAAE146DB8990039BFDA /* Bird-Source-Q100.jpg in Resources */,
+				7B94260E18EC450300346E03 /* Test@2x.png in Resources */,
 				7B8FAAAF146DB8990039BFDA /* Bird.png in Resources */,
 				7B8FAAB0146DB8990039BFDA /* Test-Alpha-Q40.jpg in Resources */,
 				7B8FAAB1146DB8990039BFDA /* Test-Alpha-Q100.jpg in Resources */,
@@ -265,8 +277,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -278,12 +296,23 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 			};
 			name = Debug;
 		};
@@ -291,20 +320,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 			};
 			name = Release;
 		};
